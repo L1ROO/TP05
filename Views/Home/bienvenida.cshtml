@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Bienvenida";
+}
+
+<h1>¡Bienvenido/a, @ViewBag.Nombre @ViewBag.Apellido!</h1>
+
+<p>Nombre de usuario: @ViewBag.NombreUsuario</p>
+<p>Nombre: @ViewBag.Nombre</p>
+<p>Apellido: @ViewBag.Apellido</p>
+<p>Tipo de usuario: @ViewBag.TipoUsuario</p>
+<div class="butc">
+    <a href="/Home/Logout">Cerrar sesión</a>
+</div>
+

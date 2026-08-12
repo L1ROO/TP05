@@ -1,31 +1,260 @@
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
     font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f4f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Barra de navegación */
+header {
+    background-color: #1f2937;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.navbar {
+    background-color: #1f2937 !important;
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #e5e7eb !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Contenido principal */
+.container {
+    max-width: 1000px;
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+/* Página de inicio */
+main > p {
+    text-align: center;
+    color: #555;
+}
+
+/* Formularios */
+form {
+    background-color: white;
+    width: 450px;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Botones */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+/* Mensajes de error */
+span[id^="error"] {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626 !important;
+    font-size: 14px;
+}
+
+/* Enlaces */
+main a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Enlaces debajo de los formularios */
+form + a {
+    display: block;
+    width: 450px;
+    max-width: 90%;
+    margin: -15px auto 30px auto;
+    text-align: center;
+}
+
+/* Página de bienvenida */
+main h1 + p {
+    background-color: white;
+    width: 450px;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+main h1 + p ~ p {
+    background-color: white;
+    width: 450px;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: white;
+    text-align: center;
+}
+
+/* Pantallas chicas */
+@media (max-width: 600px) {
+    form {
+        width: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+.but {
+    display: inline-block;
+    width: 25%;
+    margin-left: 24%;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #5c55bd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.but a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.but:hover {
+    background-color: #4d47a5;
+}
+
+
+.butr {
+    display: inline-block;
+    width: 25%;
+    margin-left: 2%;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #5c55bd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.butr a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.butr:hover {
+    background-color: #4d47a5;
+}
+.butc{
+   display: inline-block;
+    width: 25%;
+    margin-left: 38%;
+    margin-top: 3%;
+    padding: 10px;
+    background-color: #5c55bd;
+    border-radius: 8px;
+    text-align: left;
+
+}
+.butc a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.butc:hover {
+    background-color: #4d47a5;
 }

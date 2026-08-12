@@ -1,4 +1,56 @@
-<form method="post" action="Index.cshtml">
-    Ingrese un nombre de usuario: <input type="text" name="NombreUsuario">
-    Ingrese una contraseña: <input type="text" name="Contrasenia">
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h1>Registro de Usuario</h1>
+
+<form id="formRegistro" action="/Home/Registro" method="post" onsubmit="return validarFormulario()">
+
+    <p>
+        <label for="NombreUsuario">Nombre de usuario:</label><br />
+        <input type="text" id="NombreUsuario" name="NombreUsuario" />
+        <span id="errorNombreUsuario" style="color:red;"></span>
+    </p>
+
+    <p>
+        <label for="Contrasenia">Contraseña:</label><br />
+        <input type="password" id="Contrasenia" name="Contrasenia" />
+        <span id="errorContrasenia" style="color:red;"></span>
+    </p>
+
+    <p>
+        <label for="Nombre">Nombre:</label><br />
+        <input type="text" id="Nombre" name="Nombre" />
+        <span id="errorNombre" style="color:red;"></span>
+    </p>
+
+    <p>
+        <label for="Apellido">Apellido:</label><br />
+        <input type="text" id="Apellido" name="Apellido" />
+        <span id="errorApellido" style="color:red;"></span>
+    </p>
+
+    <p>
+        <label for="TipoUsuario">Tipo de Usuario:</label><br />
+        <select id="TipoUsuario" name="TipoUsuario">
+            <option value="">-- Seleccione --</option>
+            <option value="Alumno">Alumno</option>
+            <option value="Docente">Docente</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Padre">Padre</option>
+        </select>
+        <span id="errorTipoUsuario" style="color:red;"></span>
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red;">@ViewBag.Error</p>
+    }
+
+    <p>
+        <input type="submit" value="Registrarme" />
+    </p>
+
 </form>
+
+<a href="/Home/Login">Ya tengo una cuenta</a>

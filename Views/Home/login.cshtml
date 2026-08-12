@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Iniciar Sesión</h1>
+
+<form id="formLogin" action="/Home/Login" method="post" onsubmit="return validarLogin()">
+
+    <p>
+        <label for="NombreUsuario">Nombre de usuario:</label><br />
+        <input type="text" id="NombreUsuario" name="NombreUsuario" />
+        <span id="errorNombreUsuario" style="color:red;"></span>
+    </p>
+
+    <p>
+        <label for="Contrasenia">Contraseña:</label><br />
+        <input type="password" id="Contrasenia" name="Contrasenia" />
+        <span id="errorContrasenia" style="color:red;"></span>
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red;">@ViewBag.Error</p>
+    }
+
+    <p>
+        <input type="submit" value="Ingresar" />
+    </p>
+
+</form>
+
+<a href="/Home/Registro">No tengo cuenta, quiero registrarme</a>
+
